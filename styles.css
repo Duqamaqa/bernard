@@ -384,10 +384,6 @@ html[dir="rtl"] .hero h1 {
   box-shadow: 0 12px 32px rgba(35, 31, 26, 0.07);
 }
 
-.product-card.is-missing-photo {
-  border-color: rgba(122, 45, 53, 0.36);
-}
-
 .product-media {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -404,31 +400,6 @@ html[dir="rtl"] .hero h1 {
 
 .product-card:hover img {
   transform: scale(1.035);
-}
-
-.product-placeholder {
-  display: grid;
-  height: 100%;
-  place-items: center;
-  padding: 22px;
-  background:
-    linear-gradient(135deg, rgba(197, 155, 74, 0.16), transparent 52%),
-    var(--cream);
-  color: var(--muted);
-  text-align: center;
-  font-weight: 800;
-}
-
-.photo-status {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 999px;
-  background: var(--wine);
-  color: var(--cream);
-  padding: 5px 9px;
-  font-size: 0.75rem;
-  font-weight: 900;
 }
 
 .product-body {

@@ -307,17 +307,17 @@ const interfaceText = {
     languageSelector: "בחירת שפה",
     navContact: "יצירת קשר",
     heroEyebrow: "דלפק גבינות מתמחה",
-    heroCopy: "קטלוג ממוקד של קלאסיקות צרפתיות רכות, גבינות כחולות, גבינות כמהין, גלגלים הולנדיים, בוראטה טרייה ובחירות מוכנות לאירוח.",
+    heroCopy: "מבחר גבינות איכות מצרפת, הולנד, שווייץ, איטליה וישראל, לצד אפשרויות טריות לאירוח, מתנות וארוחות בבית.",
     primaryActions: "פעולות עיקריות",
     viewCatalog: "לצפייה בקטלוג",
     orderWhatsapp: "הזמנה ב-WhatsApp",
-    catalogSummary: "סיכום הקטלוג",
-    summaryItems: "פריטים בקטלוג",
-    summaryPrice: "טווח מחירים גלוי",
-    summaryPhotos: "תמונות להוספה",
+    catalogSummary: "מבט מהיר על המבחר",
+    summaryItems: "גבינות במבחר",
+    summaryPrice: "טווח מחירים",
+    summaryCountries: "שפות באתר",
     catalogEyebrow: "קטלוג",
     catalogTitle: "הגבינות בחנות",
-    catalogCopy: "עיינו בקטלוג ה-PDF הנוכחי. המחירים הועתקו מהקטלוג; כל גבינה מופיעה, כולל פריטים שעדיין צריכים תמונות מוצר.",
+    catalogCopy: "מצאו גבינות לפי שם, סגנון או משפחה. המחירים מוצגים בשקלים ועשויים להשתנות לפי זמינות ומשקל.",
     catalogControls: "פקדי קטלוג",
     searchLabel: "חיפוש גבינה",
     searchPlaceholder: "חיפוש לפי שם, סגנון או תגית",
@@ -333,17 +333,13 @@ const interfaceText = {
     hostingEverydayCopy: "שמרו Gouda, Maasdam, Mozzarella, Burrata או Emmental מגוררת לכריכים, סלטים, פסטה וצלחות מהירות.",
     contactEyebrow: "ביקור והזמנות",
     contactTitle: "שריינו את הגבינות לפני ההגעה",
-    contactCopy: "הגרסה הראשונה מוכנה לפרטי קשר אמיתיים, כתובת, שעות פתיחה וקישורי הזמנה.",
-    whatsappPlaceholder: "מספר להוספה",
-    addressLabel: "כתובת",
-    addressPlaceholder: "כתובת החנות להוספה",
-    footerNote: "גרסת קטלוג ראשונה מתוך ה-PDF שסופק",
+    contactCopy: "להזמנות ושמירת גבינות, שלחו הודעה ב-WhatsApp לפני ההגעה.",
+    websiteLabel: "אתר",
+    footerNote: "גבינות איכות לאירוח, מתנות ויום-יום",
     productTags: "תגיות מוצר",
-    photoMissing: "תמונה חסרה",
-    needsPhoto: "צריך תמונה",
     askInShop: "לשאול בחנות",
     piece: "יחידה",
-    count: (shown, total, missing) => `${shown} מתוך ${total} גבינות מוצגות · ${missing} צריכות תמונות`,
+    count: (shown, total) => `${shown} מתוך ${total} גבינות מוצגות`,
     filters: {
       all: "הכול",
       soft: "רכות",
@@ -353,7 +349,6 @@ const interfaceText = {
       dutch: "הולנדיות",
       fresh: "טריות",
       truffle: "כמהין",
-      "missing-photo": "חסרות תמונה",
     },
     tags: {
       aged: "מיושנת",
@@ -426,17 +421,17 @@ const interfaceText = {
     languageSelector: "Language selector",
     navContact: "Contact",
     heroEyebrow: "Specialty cheese counter",
-    heroCopy: "A focused catalog of soft French classics, blue cheeses, truffle favorites, Dutch wheels, fresh burrata and hosting-ready selections.",
+    heroCopy: "A curated selection of fine cheeses from France, the Netherlands, Switzerland, Italy and Israel, with fresh choices for hosting, gifts and everyday meals.",
     primaryActions: "Primary actions",
     viewCatalog: "View catalog",
     orderWhatsapp: "Order by WhatsApp",
-    catalogSummary: "Catalog summary",
-    summaryItems: "catalog items",
-    summaryPrice: "visible price range",
-    summaryPhotos: "photos to add",
+    catalogSummary: "Selection at a glance",
+    summaryItems: "cheeses available",
+    summaryPrice: "price range",
+    summaryCountries: "site languages",
     catalogEyebrow: "Catalog",
     catalogTitle: "Cheeses in the shop",
-    catalogCopy: "Browse the current PDF catalog. Prices are copied from the catalog; every cheese is listed, including items that still need product photos.",
+    catalogCopy: "Find cheeses by name, style or family. Prices are shown in shekels and may vary by availability and weight.",
     catalogControls: "Catalog controls",
     searchLabel: "Search cheese",
     searchPlaceholder: "Search by name, style or tag",
@@ -452,17 +447,13 @@ const interfaceText = {
     hostingEverydayCopy: "Keep Gouda, Maasdam, Mozzarella, Burrata or Emmental grated ready for sandwiches, salads, pasta and quick plates.",
     contactEyebrow: "Visit and orders",
     contactTitle: "Reserve your cheeses before you arrive",
-    contactCopy: "The first version is ready for real contact details, address, opening hours and ordering links.",
-    whatsappPlaceholder: "Number to add",
-    addressLabel: "Address",
-    addressPlaceholder: "Shop address to add",
-    footerNote: "Catalog first version from the provided PDF",
+    contactCopy: "For orders and cheese reservations, send a WhatsApp message before you arrive.",
+    websiteLabel: "Website",
+    footerNote: "Fine cheeses for hosting, gifts and everyday meals",
     productTags: "Product tags",
-    photoMissing: "Photo missing",
-    needsPhoto: "Needs photo",
     askInShop: "Ask in shop",
     piece: "piece",
-    count: (shown, total, missing) => `${shown} of ${total} cheeses shown · ${missing} need photos`,
+    count: (shown, total) => `${shown} of ${total} cheeses shown`,
     filters: {
       all: "All",
       soft: "Soft",
@@ -472,7 +463,6 @@ const interfaceText = {
       dutch: "Dutch",
       fresh: "Fresh",
       truffle: "Truffle",
-      "missing-photo": "Missing photos",
     },
     tags: {
       aged: "Aged",
@@ -502,17 +492,17 @@ const interfaceText = {
     languageSelector: "Sélecteur de langue",
     navContact: "Contact",
     heroEyebrow: "Comptoir de fromages de spécialité",
-    heroCopy: "Un catalogue précis de classiques français à pâte molle, de bleus, de favoris à la truffe, de meules hollandaises, de burrata fraîche et de sélections prêtes pour recevoir.",
+    heroCopy: "Une sélection de fromages de qualité de France, des Pays-Bas, de Suisse, d'Italie et d'Israël, avec des options fraîches pour recevoir, offrir et cuisiner.",
     primaryActions: "Actions principales",
     viewCatalog: "Voir le catalogue",
     orderWhatsapp: "Commander sur WhatsApp",
-    catalogSummary: "Résumé du catalogue",
-    summaryItems: "articles au catalogue",
-    summaryPrice: "fourchette de prix visible",
-    summaryPhotos: "photos à ajouter",
+    catalogSummary: "La sélection en bref",
+    summaryItems: "fromages disponibles",
+    summaryPrice: "fourchette de prix",
+    summaryCountries: "langues du site",
     catalogEyebrow: "Catalogue",
     catalogTitle: "Les fromages en boutique",
-    catalogCopy: "Parcourez le catalogue PDF actuel. Les prix sont repris du catalogue ; tous les fromages sont listés, y compris les articles qui nécessitent encore des photos produit.",
+    catalogCopy: "Trouvez les fromages par nom, style ou famille. Les prix sont indiqués en shekels et peuvent varier selon la disponibilité et le poids.",
     catalogControls: "Contrôles du catalogue",
     searchLabel: "Rechercher un fromage",
     searchPlaceholder: "Recherche par nom, style ou étiquette",
@@ -528,17 +518,13 @@ const interfaceText = {
     hostingEverydayCopy: "Gardez Gouda, Maasdam, Mozzarella, Burrata ou Emmental râpé pour les sandwichs, salades, pâtes et assiettes rapides.",
     contactEyebrow: "Visite et commandes",
     contactTitle: "Réservez vos fromages avant votre arrivée",
-    contactCopy: "La première version est prête pour les vrais contacts, l'adresse, les horaires d'ouverture et les liens de commande.",
-    whatsappPlaceholder: "Numéro à ajouter",
-    addressLabel: "Adresse",
-    addressPlaceholder: "Adresse de la boutique à ajouter",
-    footerNote: "Première version du catalogue à partir du PDF fourni",
+    contactCopy: "Pour commander ou réserver des fromages, envoyez un message WhatsApp avant votre arrivée.",
+    websiteLabel: "Site web",
+    footerNote: "Fromages de qualité pour recevoir, offrir et savourer au quotidien",
     productTags: "Étiquettes produit",
-    photoMissing: "Photo manquante",
-    needsPhoto: "Photo à ajouter",
     askInShop: "Demander en boutique",
     piece: "pièce",
-    count: (shown, total, missing) => `${shown} fromages sur ${total} affichés · ${missing} photos à ajouter`,
+    count: (shown, total) => `${shown} fromages sur ${total} affichés`,
     filters: {
       all: "Tous",
       soft: "Pâtes molles",
@@ -548,7 +534,6 @@ const interfaceText = {
       dutch: "Hollandais",
       fresh: "Frais",
       truffle: "Truffe",
-      "missing-photo": "Photos manquantes",
     },
     tags: {
       aged: "Affiné",
@@ -621,17 +606,17 @@ const interfaceText = {
     languageSelector: "Выбор языка",
     navContact: "Контакты",
     heroEyebrow: "Специализированная сырная витрина",
-    heroCopy: "Подборка мягкой французской классики, голубых сыров, трюфельных фаворитов, голландских кругов, свежей бурраты и вариантов для приема гостей.",
+    heroCopy: "Подборка качественных сыров из Франции, Нидерландов, Швейцарии, Италии и Израиля, а также свежие варианты для гостей, подарков и домашней кухни.",
     primaryActions: "Основные действия",
     viewCatalog: "Смотреть каталог",
     orderWhatsapp: "Заказать в WhatsApp",
-    catalogSummary: "Сводка каталога",
-    summaryItems: "позиций в каталоге",
-    summaryPrice: "видимый диапазон цен",
-    summaryPhotos: "фото нужно добавить",
+    catalogSummary: "Коротко о выборе",
+    summaryItems: "сыров в наличии",
+    summaryPrice: "диапазон цен",
+    summaryCountries: "языка сайта",
     catalogEyebrow: "Каталог",
     catalogTitle: "Сыры в магазине",
-    catalogCopy: "Просмотрите текущий PDF-каталог. Цены скопированы из каталога; указаны все сыры, включая позиции, которым еще нужны фотографии.",
+    catalogCopy: "Ищите сыры по названию, стилю или категории. Цены указаны в шекелях и могут меняться в зависимости от наличия и веса.",
     catalogControls: "Управление каталогом",
     searchLabel: "Поиск сыра",
     searchPlaceholder: "Поиск по названию, стилю или тегу",
@@ -647,17 +632,13 @@ const interfaceText = {
     hostingEverydayCopy: "Держите Gouda, Maasdam, Mozzarella, Burrata или тертый Emmental для сэндвичей, салатов, пасты и быстрых тарелок.",
     contactEyebrow: "Визит и заказы",
     contactTitle: "Зарезервируйте сыры до приезда",
-    contactCopy: "Первая версия готова для реальных контактов, адреса, часов работы и ссылок для заказов.",
-    whatsappPlaceholder: "Номер нужно добавить",
-    addressLabel: "Адрес",
-    addressPlaceholder: "Адрес магазина нужно добавить",
-    footerNote: "Первая версия каталога из предоставленного PDF",
+    contactCopy: "Для заказа или резервирования сыров отправьте сообщение в WhatsApp перед приездом.",
+    websiteLabel: "Сайт",
+    footerNote: "Качественные сыры для гостей, подарков и каждый день",
     productTags: "Теги продукта",
-    photoMissing: "Фото отсутствует",
-    needsPhoto: "Нужно фото",
     askInShop: "Уточнить в магазине",
     piece: "шт.",
-    count: (shown, total, missing) => `Показано ${shown} из ${total} сыров · фото нужно добавить: ${missing}`,
+    count: (shown, total) => `Показано ${shown} из ${total} сыров`,
     filters: {
       all: "Все",
       soft: "Мягкие",
@@ -667,7 +648,6 @@ const interfaceText = {
       dutch: "Голландские",
       fresh: "Свежие",
       truffle: "Трюфель",
-      "missing-photo": "Нет фото",
     },
     tags: {
       aged: "Выдержанный",
@@ -735,7 +715,6 @@ const interfaceText = {
 
 interfaceText.en.styles = Object.fromEntries(products.map((product) => [product.style, product.style]));
 
-const missingPhotoCount = products.filter((product) => !product.image).length;
 const grid = document.querySelector("#product-grid");
 const count = document.querySelector("#catalog-count");
 const empty = document.querySelector("#empty-state");
@@ -811,7 +790,6 @@ function productMatches(product, query) {
     formatPrice(product),
     product.style,
     translateStyle(product.style),
-    product.image ? "" : `${text.photoMissing} ${text.needsPhoto} missing photo photo to add`,
     ...product.tags.map((tag) => translateTag(tag)),
     ...product.tags,
   ]
@@ -822,7 +800,6 @@ function productMatches(product, query) {
 }
 
 function productInFilter(product) {
-  if (activeFilter === "missing-photo") return !product.image;
   return activeFilter === "all" || product.tags.includes(activeFilter);
 }
 
@@ -834,13 +811,7 @@ function renderProducts() {
   grid.innerHTML = filtered
     .map((product) => {
       const name = escapeHTML(product.name);
-      const media = product.image
-        ? `<img src="${escapeHTML(product.image)}" alt="${name}" loading="lazy">`
-        : `<div class="product-placeholder">${escapeHTML(text.photoMissing)}</div>`;
-
-      const photoBadge = product.image
-        ? ""
-        : `<span class="photo-status">${escapeHTML(text.needsPhoto)}</span>`;
+      const media = `<img src="${escapeHTML(product.image)}" alt="${name}" loading="lazy">`;
 
       const tags = product.tags
         .slice(0, 3)
@@ -848,10 +819,9 @@ function renderProducts() {
         .join("");
 
       return `
-        <article class="product-card${product.image ? "" : " is-missing-photo"}">
+        <article class="product-card">
           <div class="product-media">
             ${media}
-            ${photoBadge}
           </div>
           <div class="product-body">
             <div class="product-topline">
@@ -866,7 +836,7 @@ function renderProducts() {
     })
     .join("");
 
-  count.textContent = text.count(filtered.length, products.length, missingPhotoCount);
+  count.textContent = text.count(filtered.length, products.length);
   empty.hidden = filtered.length > 0;
 }
 
