@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bernard La Fromagerie | קטלוג גבינות</title>
+    <meta
+      name="description"
+      content="קטלוג הגבינות של Bernard La Fromagerie עם גבינות צרפתיות, שווייצריות, הולנדיות, איטלקיות ומקומיות."
+    >
+    <link rel="preload" as="image" href="assets/products/brie-truffe.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="דף הבית של Bernard La Fromagerie" data-i18n-aria="brandAria">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/brand/chez-bernard-logo.png" alt="">
+        </span>
+        <span>
+          <strong>Bernard</strong>
+          <small>La Fromagerie</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="language-switcher" aria-label="בחירת שפה" data-i18n-aria="languageSelector">
+          <button class="language-button is-active" type="button" data-lang="he">עברית</button>
+          <button class="language-button" type="button" data-lang="en">English</button>
+          <button class="language-button" type="button" data-lang="fr">Français</button>
+          <button class="language-button" type="button" data-lang="ru">Русский</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">דלפק גבינות מתמחה</p>
+          <h1 id="hero-title">Bernard La Fromagerie</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            קטלוג ממוקד של קלאסיקות צרפתיות רכות, גבינות כחולות, גבינות כמהין,
+            גלגלים הולנדיים, בוראטה טרייה ובחירות מוכנות לאירוח.
+          </p>
+          <div class="hero-actions" aria-label="פעולות עיקריות" data-i18n-aria="primaryActions">
+            <a class="button button-primary" href="#catalog" data-i18n="viewCatalog">לצפייה בקטלוג</a>
+            <a class="button button-secondary" href="#contact" data-i18n="orderWhatsapp">הזמנה ב-WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="סיכום הקטלוג" data-i18n-aria="catalogSummary">
+        <div class="summary-item">
+          <strong>42</strong>
+          <span data-i18n="summaryItems">פריטים בקטלוג</span>
+        </div>
+        <div class="summary-item">
+          <strong>₪19-₪300</strong>
+          <span data-i18n="summaryPrice">טווח מחירים גלוי</span>
+        </div>
+        <div class="summary-item">
+          <strong>0</strong>
+          <span data-i18n="summaryPhotos">תמונות להוספה</span>
+        </div>
+      </section>
+
+      <section class="section catalog-section" id="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="catalogEyebrow">קטלוג</p>
+          <h2 id="catalog-title" data-i18n="catalogTitle">הגבינות בחנות</h2>
+          <p data-i18n="catalogCopy">
+            עיינו בקטלוג ה-PDF הנוכחי. המחירים הועתקו מהקטלוג; כל גבינה מופיעה,
+            כולל פריטים שעדיין צריכים תמונות מוצר.
+          </p>
+        </div>
+
+        <div class="catalog-toolbar" aria-label="פקדי קטלוג" data-i18n-aria="catalogControls">
+          <label class="search-field">
+            <span data-i18n="searchLabel">חיפוש גבינה</span>
+            <input id="catalog-search" type="search" placeholder="חיפוש לפי שם, סגנון או תגית" data-i18n-placeholder="searchPlaceholder">
+          </label>
+
+          <div class="filter-group" id="filter-group" aria-label="סינון לפי סגנון" data-i18n-aria="filterByStyle">
+            <button class="filter-button is-active" type="button" data-filter="all">הכול</button>
+            <button class="filter-button" type="button" data-filter="soft">רכות</button>
+            <button class="filter-button" type="button" data-filter="blue">כחולות</button>
+            <button class="filter-button" type="button" data-filter="goat-sheep">עזים וצאן</button>
+            <button class="filter-button" type="button" data-filter="alpine">אלפיניות</button>
+            <button class="filter-button" type="button" data-filter="dutch">הולנדיות</button>
+            <button class="filter-button" type="button" data-filter="fresh">טריות</button>
+            <button class="filter-button" type="button" data-filter="truffle">כמהין</button>
+            <button class="filter-button filter-button-alert" type="button" data-filter="missing-photo">חסרות תמונה</button>
+          </div>
+        </div>
+
+        <div class="catalog-count" id="catalog-count" aria-live="polite"></div>
+        <div class="product-grid" id="product-grid"></div>
+        <p class="empty-state" id="empty-state" hidden data-i18n="emptyState">אין גבינות שמתאימות לחיפוש הזה.</p>
+      </section>
+
+      <section class="section hosting-section" id="hosting" aria-labelledby="hosting-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="hostingEyebrow">אירוח</p>
+          <h2 id="hosting-title" data-i18n="hostingTitle">בנו פלטת גבינות לפי הרגע</h2>
+        </div>
+        <div class="hosting-layout">
+          <article>
+            <h3 data-i18n="hostingDinnerTitle">לארוחות ערב</h3>
+            <p data-i18n="hostingDinnerCopy">שלבו גבינה רכה אחת, גבינה קשה מיושנת אחת, גבינה כחולה אחת ואפשרות טרייה אחת לפלטה מאוזנת.</p>
+          </article>
+          <article>
+            <h3 data-i18n="hostingGiftTitle">למתנות</h3>
+            <p data-i18n="hostingGiftCopy">בחרו שמות פרימיום כמו Comté, Brie Truffe, Roquefort, Gruyère או Gouda עם כמהין למבחר מיוחד וקומפקטי.</p>
+          </article>
+          <article>
+            <h3 data-i18n="hostingEverydayTitle">ליומיום</h3>
+            <p data-i18n="hostingEverydayCopy">שמרו Gouda, Maasdam, Mozzarella, Burrata או Emmental מגוררת לכריכים, סלטים, פסטה וצלחות מהירות.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contactEyebrow">ביקור והזמנות</p>
+          <h2 id="contact-title" data-i18n="contactTitle">שריינו את הגבינות לפני ההגעה</h2>
+          <p data-i18n="contactCopy">הגרסה הראשונה מוכנה לפרטי קשר אמיתיים, כתובת, שעות פתיחה וקישורי הזמנה.</p>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-row">
+            <span>WhatsApp</span>
+            <strong data-i18n="whatsappPlaceholder">מספר להוספה</strong>
+          </div>
+          <div class="contact-row">
+            <span data-i18n="addressLabel">כתובת</span>
+            <strong data-i18n="addressPlaceholder">כתובת החנות להוספה</strong>
+          </div>
+          <div class="contact-row">
+            <span>Facebook</span>
+            <strong>fromagerie.israel</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Bernard La Fromagerie</span>
+      <span data-i18n="footerNote">גרסת קטלוג ראשונה מתוך ה-PDF שסופק</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
