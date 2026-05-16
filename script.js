@@ -305,12 +305,14 @@ const interfaceText = {
     description: "קטלוג הגבינות של Bernard La Fromagerie עם גבינות צרפתיות, שווייצריות, הולנדיות, איטלקיות ומקומיות.",
     brandAria: "דף הבית של Bernard La Fromagerie",
     languageSelector: "בחירת שפה",
+    cartLinkAria: "מעבר לסל ההזמנה",
+    cartLink: "סל הזמנה",
     navContact: "יצירת קשר",
     heroEyebrow: "דלפק גבינות מתמחה",
     heroCopy: "מבחר גבינות איכות מצרפת, הולנד, שווייץ, איטליה וישראל, לצד אפשרויות טריות לאירוח, מתנות וארוחות בבית.",
     primaryActions: "פעולות עיקריות",
     viewCatalog: "לצפייה בקטלוג",
-    orderWhatsapp: "הזמנה ב-WhatsApp",
+    orderWhatsapp: "הזמנה מהירה",
     catalogSummary: "מבט מהיר על המבחר",
     summaryItems: "גבינות במבחר",
     summaryPrice: "טווח מחירים",
@@ -323,6 +325,26 @@ const interfaceText = {
     searchPlaceholder: "חיפוש לפי שם, סגנון או תגית",
     filterByStyle: "סינון לפי סגנון",
     emptyState: "אין גבינות שמתאימות לחיפוש הזה.",
+    cartEyebrow: "הזמנה",
+    cartTitle: "סל ההזמנה שלכם",
+    cartCopy: "בחרו גבינות וכמות בגרמים. בסיום נפתח הודעת WhatsApp מוכנה לשליחה.",
+    cartEmpty: "הסל ריק כרגע.",
+    sendOrder: "שליחת הזמנה ב-WhatsApp",
+    clearCart: "ניקוי הסל",
+    gramsLabel: "כמות בגרמים",
+    gramsUnit: "גרם",
+    decreaseGrams: "הפחתת גרמים",
+    increaseGrams: "הוספת גרמים",
+    addToCart: "הוספה לסל",
+    updateCart: "עדכון הסל",
+    removeItem: "הסרה",
+    linePrice: (price) => `מחיר: ${price}`,
+    unknownLinePrice: "מחיר לבירור",
+    cartTotal: (items, grams, total, unknownCount) =>
+      `${items === 1 ? "פריט אחד" : `${items} פריטים`} · סה״כ ${total}${unknownCount ? " + מחיר לבירור" : ""}`,
+    cartBadge: (items) => String(items),
+    orderIntro: "שלום, אשמח להזמין:",
+    orderFooter: "תודה!",
     hostingEyebrow: "אירוח",
     hostingTitle: "בנו פלטת גבינות לפי הרגע",
     hostingDinnerTitle: "לארוחות ערב",
@@ -419,12 +441,14 @@ const interfaceText = {
     description: "Bernard La Fromagerie cheese catalog with French, Swiss, Dutch, Italian and local specialties.",
     brandAria: "Bernard La Fromagerie home",
     languageSelector: "Language selector",
+    cartLinkAria: "Go to order cart",
+    cartLink: "Order cart",
     navContact: "Contact",
     heroEyebrow: "Specialty cheese counter",
     heroCopy: "A curated selection of fine cheeses from France, the Netherlands, Switzerland, Italy and Israel, with fresh choices for hosting, gifts and everyday meals.",
     primaryActions: "Primary actions",
     viewCatalog: "View catalog",
-    orderWhatsapp: "Order by WhatsApp",
+    orderWhatsapp: "Quick order",
     catalogSummary: "Selection at a glance",
     summaryItems: "cheeses available",
     summaryPrice: "price range",
@@ -437,6 +461,26 @@ const interfaceText = {
     searchPlaceholder: "Search by name, style or tag",
     filterByStyle: "Filter by style",
     emptyState: "No cheeses match this search.",
+    cartEyebrow: "Order",
+    cartTitle: "Your order cart",
+    cartCopy: "Choose cheeses and quantities in grams. When ready, we open a WhatsApp message prepared for sending.",
+    cartEmpty: "Your cart is empty right now.",
+    sendOrder: "Send order on WhatsApp",
+    clearCart: "Clear cart",
+    gramsLabel: "Quantity in grams",
+    gramsUnit: "g",
+    decreaseGrams: "Decrease grams",
+    increaseGrams: "Increase grams",
+    addToCart: "Add to cart",
+    updateCart: "Update cart",
+    removeItem: "Remove",
+    linePrice: (price) => `Price: ${price}`,
+    unknownLinePrice: "Price to confirm",
+    cartTotal: (items, grams, total, unknownCount) =>
+      `${items} ${items === 1 ? "item" : "items"} · total ${total}${unknownCount ? " + price to confirm" : ""}`,
+    cartBadge: (items) => String(items),
+    orderIntro: "Hello, I would like to order:",
+    orderFooter: "Thank you!",
     hostingEyebrow: "Hosting",
     hostingTitle: "Build a cheese board around the moment",
     hostingDinnerTitle: "For dinners",
@@ -490,12 +534,14 @@ const interfaceText = {
     description: "Catalogue de fromages de Bernard La Fromagerie avec des spécialités françaises, suisses, hollandaises, italiennes et locales.",
     brandAria: "Accueil Bernard La Fromagerie",
     languageSelector: "Sélecteur de langue",
+    cartLinkAria: "Aller au panier de commande",
+    cartLink: "Panier",
     navContact: "Contact",
     heroEyebrow: "Comptoir de fromages de spécialité",
     heroCopy: "Une sélection de fromages de qualité de France, des Pays-Bas, de Suisse, d'Italie et d'Israël, avec des options fraîches pour recevoir, offrir et cuisiner.",
     primaryActions: "Actions principales",
     viewCatalog: "Voir le catalogue",
-    orderWhatsapp: "Commander sur WhatsApp",
+    orderWhatsapp: "Commande rapide",
     catalogSummary: "La sélection en bref",
     summaryItems: "fromages disponibles",
     summaryPrice: "fourchette de prix",
@@ -508,6 +554,26 @@ const interfaceText = {
     searchPlaceholder: "Recherche par nom, style ou étiquette",
     filterByStyle: "Filtrer par style",
     emptyState: "Aucun fromage ne correspond à cette recherche.",
+    cartEyebrow: "Commande",
+    cartTitle: "Votre panier",
+    cartCopy: "Choisissez les fromages et les quantités en grammes. Ensuite, nous ouvrons un message WhatsApp prêt à envoyer.",
+    cartEmpty: "Votre panier est vide pour le moment.",
+    sendOrder: "Envoyer sur WhatsApp",
+    clearCart: "Vider le panier",
+    gramsLabel: "Quantité en grammes",
+    gramsUnit: "g",
+    decreaseGrams: "Réduire les grammes",
+    increaseGrams: "Ajouter des grammes",
+    addToCart: "Ajouter",
+    updateCart: "Mettre à jour",
+    removeItem: "Retirer",
+    linePrice: (price) => `Prix : ${price}`,
+    unknownLinePrice: "Prix à confirmer",
+    cartTotal: (items, grams, total, unknownCount) =>
+      `${items} ${items === 1 ? "article" : "articles"} · total ${total}${unknownCount ? " + prix à confirmer" : ""}`,
+    cartBadge: (items) => String(items),
+    orderIntro: "Bonjour, je souhaite commander :",
+    orderFooter: "Merci !",
     hostingEyebrow: "Réception",
     hostingTitle: "Composez un plateau de fromages selon l'occasion",
     hostingDinnerTitle: "Pour les dîners",
@@ -604,12 +670,14 @@ const interfaceText = {
     description: "Каталог сыров Bernard La Fromagerie: французские, швейцарские, голландские, итальянские и местные сыры.",
     brandAria: "Главная страница Bernard La Fromagerie",
     languageSelector: "Выбор языка",
+    cartLinkAria: "Перейти в корзину заказа",
+    cartLink: "Корзина",
     navContact: "Контакты",
     heroEyebrow: "Специализированная сырная витрина",
     heroCopy: "Подборка качественных сыров из Франции, Нидерландов, Швейцарии, Италии и Израиля, а также свежие варианты для гостей, подарков и домашней кухни.",
     primaryActions: "Основные действия",
     viewCatalog: "Смотреть каталог",
-    orderWhatsapp: "Заказать в WhatsApp",
+    orderWhatsapp: "Быстрый заказ",
     catalogSummary: "Коротко о выборе",
     summaryItems: "сыров в наличии",
     summaryPrice: "диапазон цен",
@@ -622,6 +690,26 @@ const interfaceText = {
     searchPlaceholder: "Поиск по названию, стилю или тегу",
     filterByStyle: "Фильтр по стилю",
     emptyState: "По этому поиску сыры не найдены.",
+    cartEyebrow: "Заказ",
+    cartTitle: "Ваша корзина",
+    cartCopy: "Выберите сыры и количество в граммах. Затем откроется готовое сообщение WhatsApp.",
+    cartEmpty: "Корзина пока пуста.",
+    sendOrder: "Отправить в WhatsApp",
+    clearCart: "Очистить корзину",
+    gramsLabel: "Количество в граммах",
+    gramsUnit: "г",
+    decreaseGrams: "Уменьшить граммы",
+    increaseGrams: "Добавить граммы",
+    addToCart: "Добавить",
+    updateCart: "Обновить",
+    removeItem: "Удалить",
+    linePrice: (price) => `Цена: ${price}`,
+    unknownLinePrice: "Цена уточняется",
+    cartTotal: (items, grams, total, unknownCount) =>
+      `${items} ${items === 1 ? "позиция" : "позиций"} · итого ${total}${unknownCount ? " + цена уточняется" : ""}`,
+    cartBadge: (items) => String(items),
+    orderIntro: "Здравствуйте, хочу заказать:",
+    orderFooter: "Спасибо!",
     hostingEyebrow: "Для гостей",
     hostingTitle: "Соберите сырную тарелку под нужный момент",
     hostingDinnerTitle: "Для ужинов",
@@ -715,15 +803,34 @@ const interfaceText = {
 
 interfaceText.en.styles = Object.fromEntries(products.map((product) => [product.style, product.style]));
 
+const WHATSAPP_NUMBER = "972526599466";
+const CART_STORAGE_KEY = "bernard-order-cart";
+const DEFAULT_GRAMS = 250;
+const MIN_GRAMS = 50;
+const MAX_GRAMS = 5000;
+const GRAMS_STEP = 50;
+const HEBREW_ORDER_INTRO = "שלום, אשמח להזמין:";
+const HEBREW_ORDER_FOOTER = "תודה!";
+const HEBREW_GRAMS_UNIT = "גרם";
+const HEBREW_TOTAL_LABEL = "סה״כ";
+const HEBREW_UNKNOWN_PRICE = "מחיר לבירור";
+
 const grid = document.querySelector("#product-grid");
 const count = document.querySelector("#catalog-count");
 const empty = document.querySelector("#empty-state");
 const search = document.querySelector("#catalog-search");
 const filterGroup = document.querySelector("#filter-group");
 const languageButtons = document.querySelectorAll(".language-button");
+const cartBadge = document.querySelector("#cart-badge");
+const cartTotal = document.querySelector("#cart-total");
+const cartItems = document.querySelector("#cart-items");
+const cartEmpty = document.querySelector("#cart-empty");
+const sendOrderButton = document.querySelector("#send-order");
+const clearCartButton = document.querySelector("#clear-cart");
 
 let activeFilter = "all";
 let currentLanguage = "he";
+let cart = loadCart();
 
 function escapeHTML(value) {
   return String(value)
@@ -732,6 +839,85 @@ function escapeHTML(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function loadCart() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || "{}");
+    return Object.fromEntries(
+      Object.entries(saved)
+        .filter(([index]) => products[Number(index)])
+        .map(([index, grams]) => [index, normalizeGrams(grams)]),
+    );
+  } catch {
+    return {};
+  }
+}
+
+function saveCart() {
+  localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+}
+
+function normalizeGrams(value) {
+  const grams = Math.round(Number(value));
+  if (!Number.isFinite(grams)) return DEFAULT_GRAMS;
+  return Math.min(MAX_GRAMS, Math.max(MIN_GRAMS, grams));
+}
+
+function formatGrams(grams) {
+  return `${normalizeGrams(grams)} ${currentText().gramsUnit}`;
+}
+
+function formatOrderGrams(grams) {
+  return `${normalizeGrams(grams)} ${HEBREW_GRAMS_UNIT}`;
+}
+
+function parseProductPrice(product) {
+  const amount = Number(String(product.price || "").replace(/[^\d.]/g, ""));
+  return Number.isFinite(amount) && amount > 0 ? amount : null;
+}
+
+function calculateLinePrice(product, grams) {
+  const price = parseProductPrice(product);
+  if (price === null) return null;
+  if (product.unit === "piece") return price;
+  return price * (normalizeGrams(grams) / 1000);
+}
+
+function formatCurrency(amount) {
+  if (amount === null) return currentText().unknownLinePrice;
+  const rounded = Math.round(amount * 100) / 100;
+  return `₪${Number.isInteger(rounded) ? rounded.toString() : rounded.toFixed(2)}`;
+}
+
+function summarizeCart(entries) {
+  return entries.reduce(
+    (summary, entry) => {
+      const linePrice = calculateLinePrice(entry.product, entry.grams);
+      summary.totalGrams += entry.grams;
+      if (linePrice === null) {
+        summary.unknownCount += 1;
+      } else {
+        summary.totalPrice += linePrice;
+      }
+      return summary;
+    },
+    { totalGrams: 0, totalPrice: 0, unknownCount: 0 },
+  );
+}
+
+function cartEntries() {
+  return Object.entries(cart)
+    .map(([index, grams]) => ({
+      index,
+      grams: normalizeGrams(grams),
+      product: products[Number(index)],
+    }))
+    .filter((entry) => entry.product);
+}
+
+function cartItemCount() {
+  return cartEntries().length;
 }
 
 function currentText() {
@@ -806,12 +992,17 @@ function productInFilter(product) {
 function renderProducts() {
   const text = currentText();
   const query = search.value.trim().toLowerCase();
-  const filtered = products.filter((product) => productInFilter(product) && productMatches(product, query));
+  const filtered = products
+    .map((product, index) => ({ product, index }))
+    .filter(({ product }) => productInFilter(product) && productMatches(product, query));
 
   grid.innerHTML = filtered
-    .map((product) => {
+    .map(({ product, index }) => {
       const name = escapeHTML(product.name);
       const media = `<img src="${escapeHTML(product.image)}" alt="${name}" loading="lazy">`;
+      const productIndex = String(index);
+      const selectedGrams = cart[productIndex] || DEFAULT_GRAMS;
+      const addLabel = cart[productIndex] ? text.updateCart : text.addToCart;
 
       const tags = product.tags
         .slice(0, 3)
@@ -830,6 +1021,26 @@ function renderProducts() {
             </div>
             <p class="product-style">${escapeHTML(translateStyle(product.style))}</p>
             <div class="tag-list" aria-label="${escapeHTML(text.productTags)}">${tags}</div>
+            <form class="product-order" data-product-index="${productIndex}">
+              <div class="grams-field">
+                <label for="grams-${productIndex}">${escapeHTML(text.gramsLabel)}</label>
+                <span class="quantity-control">
+                  <button class="quantity-button" type="button" data-delta="-${GRAMS_STEP}" aria-label="${escapeHTML(text.decreaseGrams)}">−</button>
+                  <input
+                    class="grams-input"
+                    id="grams-${productIndex}"
+                    type="number"
+                    inputmode="numeric"
+                    min="${MIN_GRAMS}"
+                    max="${MAX_GRAMS}"
+                    step="${GRAMS_STEP}"
+                    value="${selectedGrams}"
+                  >
+                  <button class="quantity-button" type="button" data-delta="${GRAMS_STEP}" aria-label="${escapeHTML(text.increaseGrams)}">+</button>
+                </span>
+              </div>
+              <button class="add-cart-button" type="submit">${escapeHTML(addLabel)}</button>
+            </form>
           </div>
         </article>
       `;
@@ -840,13 +1051,160 @@ function renderProducts() {
   empty.hidden = filtered.length > 0;
 }
 
+function renderCart() {
+  const text = currentText();
+  const entries = cartEntries();
+  const summary = summarizeCart(entries);
+
+  cartBadge.textContent = text.cartBadge(entries.length);
+  cartTotal.textContent = text.cartTotal(
+    entries.length,
+    summary.totalGrams,
+    formatCurrency(summary.totalPrice),
+    summary.unknownCount,
+  );
+  cartEmpty.hidden = entries.length > 0;
+  sendOrderButton.disabled = entries.length === 0;
+  clearCartButton.disabled = entries.length === 0;
+
+  cartItems.innerHTML = entries
+    .map(({ index, product, grams }) => {
+      const name = escapeHTML(product.name);
+      const linePrice = calculateLinePrice(product, grams);
+      return `
+        <div class="cart-item">
+          <div>
+            <strong>${name}</strong>
+            <span class="cart-item-meta">${escapeHTML(translateStyle(product.style))} · ${escapeHTML(formatPrice(product))}</span>
+            <span class="cart-line-price">${escapeHTML(
+              linePrice === null ? text.unknownLinePrice : text.linePrice(formatCurrency(linePrice)),
+            )}</span>
+          </div>
+          <div class="cart-item-controls">
+            <div class="cart-quantity">
+              <span class="visually-hidden" id="cart-grams-label-${index}">${escapeHTML(text.gramsLabel)}</span>
+              <span class="quantity-control">
+                <button class="quantity-button" type="button" data-cart-delta="-${GRAMS_STEP}" data-product-index="${index}" aria-label="${escapeHTML(text.decreaseGrams)}">−</button>
+                <input
+                  class="cart-grams-input"
+                  type="number"
+                  inputmode="numeric"
+                  min="${MIN_GRAMS}"
+                  max="${MAX_GRAMS}"
+                  step="${GRAMS_STEP}"
+                  value="${grams}"
+                  data-product-index="${index}"
+                  aria-labelledby="cart-grams-label-${index}"
+                >
+                <button class="quantity-button" type="button" data-cart-delta="${GRAMS_STEP}" data-product-index="${index}" aria-label="${escapeHTML(text.increaseGrams)}">+</button>
+              </span>
+            </div>
+            <button class="remove-cart-item" type="button" data-remove-index="${index}">${escapeHTML(text.removeItem)}</button>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function updateCartItem(index, grams) {
+  if (!products[Number(index)]) return;
+  cart[String(index)] = normalizeGrams(grams);
+  saveCart();
+  renderCart();
+  renderProducts();
+}
+
+function removeCartItem(index) {
+  delete cart[String(index)];
+  saveCart();
+  renderCart();
+  renderProducts();
+}
+
+function clearCart() {
+  cart = {};
+  saveCart();
+  renderCart();
+  renderProducts();
+}
+
+function buildWhatsAppMessage() {
+  const entries = cartEntries();
+  const summary = summarizeCart(entries);
+  const lines = entries.map(({ product, grams }) => {
+    const linePrice = calculateLinePrice(product, grams);
+    const priceText = linePrice === null ? HEBREW_UNKNOWN_PRICE : formatCurrency(linePrice);
+    return `- ${product.name}: ${formatOrderGrams(grams)} (${priceText})`;
+  });
+  const totalLine = `${HEBREW_TOTAL_LABEL}: ${formatCurrency(summary.totalPrice)}${summary.unknownCount ? ` + ${HEBREW_UNKNOWN_PRICE}` : ""}`;
+  return [HEBREW_ORDER_INTRO, ...lines, totalLine, "", HEBREW_ORDER_FOOTER].join("\n");
+}
+
+function openWhatsAppOrder() {
+  if (cartItemCount() === 0) return;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage())}`;
+  const opened = window.open(url, "_blank", "noopener");
+  if (!opened) window.location.href = url;
+}
+
 function setLanguage(language) {
   currentLanguage = language;
   applyStaticTranslations();
   renderProducts();
+  renderCart();
 }
 
 search.addEventListener("input", renderProducts);
+
+grid.addEventListener("click", (event) => {
+  const button = event.target.closest(".quantity-button[data-delta]");
+  if (!button) return;
+
+  const form = button.closest(".product-order");
+  const input = form.querySelector(".grams-input");
+  const nextValue = normalizeGrams(Number(input.value || DEFAULT_GRAMS) + Number(button.dataset.delta));
+  input.value = nextValue;
+});
+
+grid.addEventListener("submit", (event) => {
+  const form = event.target.closest(".product-order");
+  if (!form) return;
+
+  event.preventDefault();
+  const input = form.querySelector(".grams-input");
+  updateCartItem(form.dataset.productIndex, input.value);
+});
+
+grid.addEventListener("change", (event) => {
+  const input = event.target.closest(".grams-input");
+  if (!input) return;
+  input.value = normalizeGrams(input.value);
+});
+
+cartItems.addEventListener("click", (event) => {
+  const removeButton = event.target.closest("[data-remove-index]");
+  if (removeButton) {
+    removeCartItem(removeButton.dataset.removeIndex);
+    return;
+  }
+
+  const stepButton = event.target.closest(".quantity-button[data-cart-delta]");
+  if (!stepButton) return;
+
+  const index = stepButton.dataset.productIndex;
+  const nextValue = normalizeGrams((cart[index] || DEFAULT_GRAMS) + Number(stepButton.dataset.cartDelta));
+  updateCartItem(index, nextValue);
+});
+
+cartItems.addEventListener("change", (event) => {
+  const input = event.target.closest(".cart-grams-input");
+  if (!input) return;
+  updateCartItem(input.dataset.productIndex, input.value);
+});
+
+sendOrderButton.addEventListener("click", openWhatsAppOrder);
+clearCartButton.addEventListener("click", clearCart);
 
 filterGroup.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-filter]");

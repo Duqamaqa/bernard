@@ -29,6 +29,10 @@
           <button class="language-button" type="button" data-lang="fr">Français</button>
           <button class="language-button" type="button" data-lang="ru">Русский</button>
         </nav>
+        <a class="cart-link" href="#cart" aria-label="סל הזמנה" data-i18n-aria="cartLinkAria">
+          <span data-i18n="cartLink">סל הזמנה</span>
+          <strong id="cart-badge">0</strong>
+        </a>
       </div>
     </header>
 
@@ -42,7 +46,7 @@
           </p>
           <div class="hero-actions" aria-label="פעולות עיקריות" data-i18n-aria="primaryActions">
             <a class="button button-primary" href="#catalog" data-i18n="viewCatalog">לצפייה בקטלוג</a>
-            <a class="button button-secondary" href="#contact" data-i18n="orderWhatsapp">הזמנה ב-WhatsApp</a>
+            <a class="button button-secondary" href="#cart" data-i18n="orderWhatsapp">הזמנה מהירה</a>
           </div>
         </div>
       </section>
@@ -88,6 +92,23 @@
             <button class="filter-button" type="button" data-filter="truffle">כמהין</button>
           </div>
         </div>
+
+        <section class="cart-panel" id="cart" aria-labelledby="cart-title">
+          <div class="cart-panel-header">
+            <div>
+              <p class="eyebrow" data-i18n="cartEyebrow">הזמנה</p>
+              <h3 id="cart-title" data-i18n="cartTitle">סל ההזמנה שלכם</h3>
+              <p data-i18n="cartCopy">בחרו גבינות וכמות בגרמים. בסיום נפתח הודעת WhatsApp מוכנה לשליחה.</p>
+            </div>
+            <strong id="cart-total">0 פריטים</strong>
+          </div>
+          <div class="cart-items" id="cart-items"></div>
+          <p class="cart-empty" id="cart-empty" data-i18n="cartEmpty">הסל ריק כרגע.</p>
+          <div class="cart-actions">
+            <button class="button cart-send" id="send-order" type="button" disabled data-i18n="sendOrder">שליחת הזמנה ב-WhatsApp</button>
+            <button class="button cart-clear" id="clear-cart" type="button" data-i18n="clearCart">ניקוי הסל</button>
+          </div>
+        </section>
 
         <div class="catalog-count" id="catalog-count" aria-live="polite"></div>
         <div class="product-grid" id="product-grid"></div>
